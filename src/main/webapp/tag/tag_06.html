@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>하이퍼링크 태그</h1>
+<h3>a</h3>
+
+<hr>
+
+<!-- href 속성(Attribute)이 있어야 하이퍼링크로 동작 -->
+<a>링크</a>
+
+<br><br>
+
+<!-- href 속성 부여하기 -->
+<a href="">href속성 적용</a>	<!-- 아무 링크를 적지 않으면 자기 자신을 참조하게 됨 -->
+
+<hr>
+
+
+<!-- default값은 _self / 현재 열려있는 페이지가 이동됨 -->
+<a href="http://www.naver.com">네이버로 이동</a>
+
+<br><br>
+
+<a href="http://www.naver.com" target="_blank">네이버로 이동 (새 탭)</a>
+
+<br><br>
+
+<a href="http://www.naver.com" target="_self">네이버로 이동 (현재 탭)</a>
+
+<hr>
+
+<!-- 절대경로 URL -->
+<!-- 	Absolute Path URL -->
+<!-- 	도메인주소를 포함한 URL을 뜻함 -->
+<!-- 	다른 사이트로 하이퍼링크를 적용할 때 사용 -->
+
+<a href="http://www.naver.com" target="_blank">네이버</a>
+
+<hr>
+
+<a href="https://www.iei.or.kr/intro/contact.kh" target="_blank">오시는 길</a>
+
+<hr>
+
+<!-- 상대경로 URL -->
+<!--  	Relative Path URL -->
+<!-- 	도메인 주소를 생략하고 자원(파일)의 경로는 적는 URL -->
+<!-- 	같은 사이트 내에서 다른 페이지로 이동할 때 사용 -->
+<!--  	사이트 기준점이 자기 자신이 됨 -->
+<!--  	메뉴를 구성할 때 사용할 수 있음 -->
+
+<ul>
+	<li><a href="/tag/tag_01.html">하나</a></li>
+	<!-- 		webapp폴더에서 시작 -->
+	
+	
+	<li><a href="./tag_02.html">둘</a></li>
+	<!-- 		/tag폴더에서 시작-->
+	
+	<li><a href="tag_03.html">셋</a></li>
+	<!-- 		지정문자가 없어서 현재 디렉토리(/tag)부터 시작 -->
+	
+	
+	<li><a href="../tag_04.html">넷 (잘못된 경로)</a></li>
+	<!-- 		/tag의 상위폴더인 /webapp 폴더에서 파일 찾기 -->
+	
+	<li><a href="../test.html">다섯</a></li>
+	<!-- 		/tag의 상위폴더인 /webapp 폴더에서 파일 찾기 -->
+</ul>
+
+<!-- 경로지정 문자 -->
+
+<!-- 	/ -->
+<!-- 	디렉토리(폴더)를 나타내는 기호 -->
+<!-- 	상대경로를 표현할 때 제일 앞 글자로 사용되면 루트디렉토리(Root Directory)를 표현함 -->
+<!-- 	도메인의 최상위 디렉토리를 나타냄 -->
+
+<!-- 	. -->
+<!-- 	현재 디렉토리를 표현하는 기호 -->
+<!--  	현재 페이지(파일)이 보관된 폴더 -->
+<!--  	지정 문자 없이 곧바로 파일이름으로 시작해도 현재 디렉토리로 적용됨 -->
+
+<!--  	.. -->
+<!-- 	부모디렉토리를 나타내는 기호 -->
+<!-- 	현재 페이지(파일)의 상위폴더를 나타냄 -->
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
