@@ -72,26 +72,21 @@ console.log("-----------------")
 
 //{}중괄호 블록
 //	블록 지역 스코프, Block local scope
+	console.log("block_var", block_var)
 {
-		
+	var block_var = 9999;
+	console.log("block_var", block_var)
 }
+	console.log("block_var", block_var)
 
+//var 변수는 function스코프에만 적용됨 -> block 스코프는 무시
 
+//제어문의 블록 지역 스코프
+for(var i=0; i<5; i++) {
+	
+}	//-> i가 5까지 증가하고 for문을 나옴 / 현재 i값은 5 / var 변수는 block스코프를 무시하므로 블록 밖에서도 사용 가능
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log("i", i)
 
 </script>
 
