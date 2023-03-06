@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+
+//전역변수
+var data = 123;
+console.log(data)
+
+//전역변수는 window객체에 property로 등록됨
+console.log(window.data)
+
+//-----------------------------------------------------------------
+
+function func() {
+	console.log('test')
+}
+
+//함수도 window객체에 property로 등록됨
+window.func()
+
+//-----------------------------------------------------------------
+
+//** window객체에는 각종 내장함수들이 등록되어있음
+
+//window.open() 함수 : 팝업창을 띄우는 함수
+//	open(url, target, feature)
+
+//		url : 오픈될 url경로를 지정 / 빈 문자열이면 빈 새창을 오픈
+
+//		target : 페이지가 열릴 위치의 이름을 지정 / 주로 <a>의 target에 들어갈 값과 같이 키워드로 지정
+//				-> _blank : 새탭 / _self : 현재 탭
+
+//		feature : 페이지가 열릴 때 필요한 동작 옵션을 지정
+//				-> popup, popup=yes, popup=1, popup=true : 페이지를 팝업창으로 염
+
+//		width, height : 너비, 높이를 숫자로 지정
+
+//		left or screenX / top or screenY : 팝업창의 위치를 지정
+
+open("https://www.naver.com", "네이버", "popup=yes, width=600, height=400, left=200, top=200")
+
+//-----------------------------------------------------------------
+
+//window.close() 함수 : 윈도우(창)을 닫음 / 브라우저에 따라 기본탭이 닫히지 않을 수도 있음 -> 팝업된 창은 잘 닫힘
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
