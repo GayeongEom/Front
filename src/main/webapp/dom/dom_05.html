@@ -24,13 +24,19 @@ window.onload = function() {
 	ul += "	<li>innerHTML</li>"
 	ul += "</ul>"
 	
-	document.body.innerHTML += ul
-	
 	console.log(ul)
 
+	//이건 <body>태그에 추가한 것이라 오답
+	document.body.innerHTML += ul
+	
+	//div#content에 추가하기 위해서는 content 노드를 찾아야 함
+	var content = document.getElementById("content")
+	
+	content.innerHTML = ul
+	
 	//-----------------------------------------------
 	
-	var content = document.getElementById("content")
+// 	var content = document.getElementById("content")
 	
 	console.log(content)
 	
