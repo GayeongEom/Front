@@ -47,7 +47,18 @@ function showPrompt() {
 	//반환타입 : String
 	//	입력된 텍스트 : 확인버튼, 엔터키 클릭
 	//	null : 취소버튼, esc 클릭
-	//	**아무것도 작성하지 않고 확인버튼 누르면 "" 빈 문자열 반환
+	//	**아무것도 작성하지 않고 확인버튼 누르면 "" 빈 문자열 반환d
+	
+	if(res == null) {
+		
+		console.log("취소 선택")
+	} else if(res == "") {
+		
+		console.log("입력값 없이 확인 선택")
+	} else {
+		
+		console.log("입력값", res)
+	}
 
 }
 
