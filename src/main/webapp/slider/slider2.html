@@ -71,8 +71,8 @@ $(document).ready(function() {
 	//현재 보여지는 슬라이드의 인덱스
 	var curSlide = 0;
 	
-	$("#sliderbox").click(function() {
-		
+		setInterval(function() {		
+			
 		//다음에 보여지는 슬라이드의 인덱스
 		var nextSlide = curSlide + 1
 		nextSlide %= $slider_list.length
@@ -89,9 +89,9 @@ $(document).ready(function() {
 		//증가식
 		curSlide++
 		curSlide %= $slider_list.length
-		
+		}, 2500)
 
-	})
+		
 
 
 
