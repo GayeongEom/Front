@@ -19,16 +19,29 @@ $(function() {
 	
 		alert($("input")[0].value)
 		
-	})
-	
-	$("input")[0].keydown(function() {
-	
-		if(event.keyCode==13) {
-			clickEvent()
-		}
 		
 	})
 	
+// 	$("input")[0].keydown(function() {
+// 		console.log("input keydown")
+// // 		if(keyCode==13) {
+// // 			clickEvent()
+// // 		}
+		
+// 	})
+
+// 	$("input[name~='msg']").keydown(function(){
+		
+// 		console.log("this", this)
+// 	})
+	
+	//$("input")[0] 는 JS 객체
+	//이벤트는 jQuery 객체에 걸어줘야 함
+	$("input").eq(0).keydown(function(){
+		console.log("key down")
+	})
+	
+
 
 	
 		
