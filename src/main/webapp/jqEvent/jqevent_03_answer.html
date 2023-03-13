@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script  type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	
+	//입력창에 focus 이벤트 발생시키기
+	$("input[name~='msg']").focus()
+	
+	//--------------------------------------------------------
+	
+	$("#btnSend").click(function() {
+		console.log("#btnSend click")
+		
+		alert("입력메세지 : " + $("input[name~='msg']").val())
+		$("input[name~='msg']").val("")	//입력창 초기화
+		$("input[name~='msg']").focus()	//입력창 포커스
+		
+	//--------------------------------------------------------
+
+	//jQuery DOM 객체를 변수에 저장해놓고 사용하기
+	var $input = $("input[name~='msg']")
+	
+	alert("입력메세지 : " + $input.val())
+	$input.val("")	//입력창 초기화
+	$input.focus()	//입력창 포커스
+	
+	//--------------------------------------------------------
+
+	//DOM 트리 순회코드(.prev())를 활용하기
+	//	this인 전송버튼을 기준으로 이전형제인 input을 고르기
+	
+	alert("입력메세지 : " + $(this).prev.val())
+	$(this).prev.val("")	//입력창 초기화
+	$(this).prev.focus()	//입력창 포커스
+	
+	})
+	
+	
+	
+	
+})
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+<div>
+	<input type="text" name="msg">
+	<button id="btnSend">전송</button>
+</div>
+
+</body>
+</html>
